@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Code Display</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Last Key Pressed</h1>
+    <p>Key Code: <span id="keyCode"></span></p>
+    <p>Key Value: <span id="keyValue"></span></p>
+
+    <script>
+        document.addEventListener('keydown', (event) => {
+            document.getElementById('keyCode').textContent = event.keyCode;
+            document.getElementById('keyValue').textContent = event.key;
+        });
+    </script>
+</body>
+</html>
